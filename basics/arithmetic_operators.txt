@@ -1,0 +1,78 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var a, b int = 10, 3
+	var result int
+	result = a + b
+	fmt.Println("Addition:", result)
+	result = a - b
+	fmt.Println("Subtraction:", result)
+	result = a * b
+	fmt.Println("Multiplication:", result)
+	result = a / b
+	fmt.Println("Division:", result)
+	result = a % b
+	fmt.Println("Modulus:", result)
+
+	const p float64 = 10 / 3
+	fmt.Println("Value of p:", p)
+
+	const t float64 = 22 / 7
+	fmt.Println("Value of t:", t)
+	const q float64 = 22 / 7.0
+	fmt.Println("Value of q:", q)
+	const r float64 = 22.0 / 7
+	fmt.Println("Value of r:", r)
+	const s float64 = 22.0 / 7.0
+	fmt.Println("Value of s:", s)
+
+	var maxInt64 int64 = 9223372036854775807
+	fmt.Println("Value of maxInt:", maxInt64)
+
+	maxInt64 += 1
+	fmt.Println("Value of maxInt after increment:", maxInt64)
+
+	var maxInt32 int32 = 2147483647
+	fmt.Println("Value of maxInt32:", maxInt32)
+
+	maxInt32 += 1
+	fmt.Println("Value of maxInt32 after increment:", maxInt32)
+
+	var maxInt16 int16 = 32767
+	fmt.Println("Value of maxInt16:", maxInt16)
+
+	maxInt16 += 1
+	fmt.Println("Value of maxInt16 after increment:", maxInt16)
+
+	var maxInt8 int8 = 127
+	fmt.Println("Value of maxInt8:", maxInt8)
+
+	maxInt8 += 1
+	fmt.Println("Value of maxInt8 after increment:", maxInt8)
+
+	var maxUint8 uint8 = 255
+	fmt.Println("Value of maxUint8:", maxUint8)
+
+	maxUint8 += 1
+	fmt.Println("Value of maxUint8 after increment:", maxUint8)
+
+	//underflow
+	var smallFloat float64 = 1.0e-323
+	fmt.Println("Value of smallFloat:", smallFloat)
+
+	smallFloat /= math.MaxFloat64
+	fmt.Println("Value of smallFloat after division:", smallFloat)
+
+	//overflow
+	var largeFloat float64 = 1.0e+308
+	fmt.Println("Value of largeFloat:", largeFloat)
+
+	largeFloat *= 1.0e+308
+	fmt.Println("Value of largeFloat after multiplication:", largeFloat)
+
+}
