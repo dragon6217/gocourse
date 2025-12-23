@@ -1,0 +1,42 @@
+package main
+
+import "fmt"
+
+var middleName = "Cane"
+
+func main() {
+	// var age int
+	// var name string = "John"
+	// var name = "Jane"
+
+	// count := 10
+	// lastname := "Smith"
+	middleName := "Cane2"
+	fmt.Println(middleName)
+
+	// default values
+	// numeric types: 0
+	// boolean types: false
+	// string types: ""
+	// pointer types: nil
+	// interface types: nil
+	// slice types: nil
+	// map types: nil
+	// channel types: nil
+	// function types: nil
+	// struct types: nil
+	// array types: nil
+	// struct types: nil
+	// array types: nil
+	// struct types: nil
+
+	// scope
+
+	printname()
+
+}
+
+func printname() {
+	firstName := "Micheal"
+	fmt.Println(firstName)
+}

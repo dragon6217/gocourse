@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+var firstName = "John"
+
+type Employee struct {
+	FirstName string
+	LastName  string
+	Age       int
+}
+
+func main() {
+	//PascalCase
+	// structs, interfaces, enums
+	// CalculateAre, UserInfo, NewHTTPRequest
+
+	//snake_case
+	// user_id, first_name, http_request
+
+	//UPPERCASE
+	// constants
+
+	//mixedCase
+	// javaScript, htmlDocument, isValid
+
+	const MAXRETRIES = 3
+	var employeeID = 1001
+	fmt.Println(employeeID)
+
+	// fmt.Println(firstName)
+	// firstName := "Jane"
+	// fmt.Println(firstName)
+	// check()
+}
+
+// func check() {
+// 	fmt.Println(firstName)
+// }
