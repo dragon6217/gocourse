@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	source := rand.NewSource(time.Now().UnixNano())
+	random := rand.New(source)
+
+	fmt.Println(time.Now().Unix())
+	fmt.Println(time.Now())
+	fmt.Println(time.Now().UnixNano())
+	fmt.Println(source)
+	fmt.Println(random)
+
+	secretNumber := random.Intn(100) + 1
+	fmt.Println("Guess the number!")
+
+	for {
+		fmt.Print("Enter your guess: ")
+		var guess int
+		fmt.Scan(&guess)
+		if guess == secretNumber {
+			fmt.Println("You guessed the number!")
+			break
+		} else if guess < secretNumber {
+			fmt.Println("Too low!")
+		} else {
+			fmt.Println("Too high!")
+		}
+	}
+}

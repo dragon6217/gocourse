@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	i := 1
+	for i <= 5 {
+		fmt.Println(i)
+		i++
+	}
+
+	for {
+		fmt.Println("Hello, World!")
+		if i == 8 {
+			break
+		}
+		i++
+	}
+
+	for num := 1; num <= 10; num++ {
+		if num%2 == 0 {
+			continue
+		}
+		fmt.Println(num)
+	}
+
+}
