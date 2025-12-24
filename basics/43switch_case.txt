@@ -1,0 +1,77 @@
+package main
+
+import "fmt"
+
+func main() {
+	day := "Tuesday"
+	switch day {
+	case "Monday":
+		fmt.Println("Today is Monday")
+		fallthrough
+	case "Tuesday":
+		fmt.Println("Today is Tuesday")
+		fallthrough
+	case "Wednesday":
+		fmt.Println("Today is Wednesday")
+	default:
+		fmt.Println("Today is not a weekday")
+	}
+
+	fmt.Println("--------------------------------")
+
+	day = "Thursday"
+	switch day {
+	case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
+		fmt.Println("Today is a weekday")
+	case "Saturday", "Sunday":
+		fmt.Println("Today is a weekend")
+	default:
+		fmt.Println("Today is not a weekday or weekend")
+	}
+
+	fmt.Println("--------------------------------")
+
+	number := 15
+	switch {
+	case number < 10:
+		fmt.Println("Number is less than 10")
+	case number >= 10 && number <= 20:
+		fmt.Println("Number is between 10 and 20")
+	default:
+		fmt.Println("Number is greater than 20")
+	}
+
+	fmt.Println("--------------------------------")
+	number = 10
+	switch {
+	case number > 1:
+		fmt.Println("Number is greater than 1")
+		fallthrough
+	case number == 2:
+		fmt.Printf("Number is 2, number = %d\n", number)
+	default:
+		fmt.Println("Number is less than 1")
+	}
+
+	fmt.Println("--------------------------------")
+	checkType(11)
+	checkType("Hello")
+	checkType(3.14)
+	checkType(true)
+	checkType(int32(10))
+	checkType(int(10))
+
+}
+
+func checkType(x interface{}) {
+	switch x.(type) {
+	case int:
+		fmt.Println("x is an int")
+	case int32:
+		fmt.Println("x is an int32")
+	case string:
+		fmt.Println("x is a string")
+	default:
+		fmt.Println("x is not an int or a string")
+	}
+}

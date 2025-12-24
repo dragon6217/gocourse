@@ -1,0 +1,44 @@
+package main
+
+import "fmt"
+
+func main() {
+	var age int = 20
+	if age >= 18 {
+		fmt.Println("You are an adult")
+	} else {
+		fmt.Println("You are a minor")
+	}
+
+	num := 10
+	if num > 0 {
+		fmt.Println("Number is positive")
+	} else if num < 0 {
+		fmt.Println("Number is negative")
+	} else {
+		fmt.Println("Number is zero")
+	}
+
+	num = 15
+	if num%2 == 0 {
+		if num%4 == 0 {
+			fmt.Println("Number is divisible by 4")
+		} else {
+			fmt.Println("Number is divisible by 2")
+		}
+	} else {
+		fmt.Println("Number is odd")
+	}
+
+	if 11%2 == 0 || 11%3 == 0 {
+		fmt.Println("Number is divisible by 2 or 3")
+	} else {
+		fmt.Println("Number is not divisible by 2 or 3")
+	}
+
+	if 11%2 == 0 && 11%3 == 0 {
+		fmt.Println("Number is divisible by 2 and 3")
+	} else {
+		fmt.Println("Number is not divisible by 2 and 3")
+	}
+}
