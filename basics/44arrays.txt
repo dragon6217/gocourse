@@ -1,0 +1,89 @@
+package main
+
+import "fmt"
+
+func main() {
+	arr := [3]int{1, 2, 3}
+	fmt.Println(arr)
+
+	var arr2 [5]int
+	fmt.Println(arr2)
+
+	var arr3 = [4]string{"a", "b", "c", "d"}
+	fmt.Println(arr3)
+
+	arr2[0] = 10
+	fmt.Println(arr2)
+
+	arr2[1] = 20
+	fmt.Println(arr2)
+
+	arr2[2] = 30
+	fmt.Println(arr2)
+	fmt.Println(arr2[2])
+
+	originalArray := [3]int{1, 2, 3}
+	copiedArray := originalArray
+	fmt.Println("copiedArray", copiedArray)
+	fmt.Println("originalArray", originalArray)
+
+	copiedArray[0] = 10
+	fmt.Println("copiedArray", copiedArray)
+	fmt.Println("originalArray", originalArray)
+
+	copiedArray = [3]int{4, 5, 6}
+	fmt.Println("copiedArray", copiedArray)
+	fmt.Println("originalArray", originalArray)
+
+	for _, v := range copiedArray {
+		fmt.Println(v)
+	}
+
+	_, b := someFunc()
+	fmt.Println(b)
+	c, _ := someFunc()
+	fmt.Println(c)
+	_, f := someFunc()
+	_ = f
+
+	fmt.Println("length of arr3 is :", len(arr3))
+
+	array1 := [3]int{1, 2, 3}
+	array2 := [3]int{1, 2, 3}
+	fmt.Println("array1 is equal to array2:", array1 == array2)
+
+	// var matrix [3][3]int = [3][3]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	matrix1 := [3][3]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	fmt.Println("matrix1:", matrix1)
+
+	for _, row := range matrix1 {
+		for _, value := range row {
+			fmt.Println(value)
+		}
+	}
+
+	matrix2 := [3][3]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	fmt.Println("matrix2:", matrix2)
+	fmt.Println("matrix1 is equal to matrix2:", matrix1 == matrix2)
+
+	oriArray := [3]int{1, 2, 3}
+	var copArray *[3]int = new([3]int)
+	copArray2 := (*[3]int)(&oriArray)
+	fmt.Println("copArray:", copArray)
+	fmt.Println("copArray2:", copArray2)
+	// fmt.Println("copArray:", *copArray)
+	copArray = &oriArray
+	fmt.Println("oriArray address:", &oriArray)
+	fmt.Println("copArray address:", copArray)
+	fmt.Println("copArray:", *copArray)
+	fmt.Println("oriArray:", oriArray)
+
+	(*copArray)[0] = 10
+	fmt.Println("copArray:", *copArray)
+	fmt.Println("oriArray:", oriArray)
+
+}
+
+func someFunc() (int, int) {
+	return 1, 2
+}
